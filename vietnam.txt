@@ -1,0 +1,44 @@
+﻿focus_tree = {
+    id = vietnamese_focus
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = VIN
+        }
+    }
+
+    default = no
+
+    continuous_focus_position = { x = 20 y = 1000 }
+
+    focus = {
+        id = vietnamese_focus_1
+        icon = GFX_goal_generic_navy_cruiser
+        x = 5
+        y = 10
+        #relative_position_id = JAP_long_lance_torpedoes
+
+        available = {
+            NOT = { is_in_faction_with = JAP }
+        }
+        bypass = {
+        }
+        cost = 3 
+        #prerequisite = { focus = JAP_long_lance_torpedoes }
+
+
+
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+
+        completion_reward = {
+            add_poltical_power= 200
+        }
+        ai_will_do = {
+            factor = 2
+        }
+    }
+}

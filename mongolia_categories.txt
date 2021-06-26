@@ -1,0 +1,11 @@
+mongol_category = {		
+	priority = 9		
+	icon = GFX_category_icon	
+	
+	allowed = {
+		always = yes
+	}
+	visible = {		
+		always = yes
+	}
+}

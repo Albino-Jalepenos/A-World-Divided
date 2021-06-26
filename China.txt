@@ -1,0 +1,31 @@
+﻿###########################
+# Mongolian Events
+###########################
+
+add_namespace = mongolia.demand_tuvan_subjugation
+
+country_event = {
+	id = mongolia.demand_tuvan_subjugation.1
+	title = "Mongol Ultimatum"
+	desc = mongolia.demand_tuvan_subjugation.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Concede to the Mongols"
+		ai_chance = { factor = 90 }
+		MON = { puppet = ROOT
+	}
+}
+	option = {
+		name = "We will never work with Mongol scum!"
+		ai_chance = { factor = 10 }
+		MON = {
+		create_wargoal = {
+    type = puppet_wargoal_focus
+    target = ROOT
+			}
+		}
+	}
+}

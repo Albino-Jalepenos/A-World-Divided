@@ -1,0 +1,196 @@
+ideas = {
+
+	country = {
+		spirit_of_genghis = {
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				justify_war_goal_time = -0.5
+			}
+		}
+	}
+	country = {
+		lost_purpose_in_the_world = {
+			picture = idea_chi_incompetent_officers
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.3
+			}
+		}
+	}
+	country = {
+		advanced_cavalry_defense = {
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_defence_factor = 0.1
+			}
+		}
+	}
+	country = {
+		advanced_cavalry_offense = {
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+			}
+		}
+	}
+	country = {
+		advanced_cavalry_mobility = {
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_speed_factor = 0.5
+			}
+		}
+	}
+	country = {
+		uncivilised_nation = {
+			picture = generic_army_problems
+			
+			allowed = {
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				line_change_production_efficiency_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = -0.2
+				research_speed_factor = -0.1
+			}
+		}
+	}
+	country = {
+		support_the_democratic_union_coalition = {
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				always = no
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+	}
+	country = {
+		socialist_tax_reform = {
+			picture =  generic_goods_red_bonus
+
+			
+			allowed = {
+				always = no
+				tag = MON
+			}
+			
+			available = {}
+			
+			cancel = {}
+
+			allowed_civil_war = {
+				has_government = communist
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}

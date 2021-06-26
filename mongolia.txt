@@ -1,0 +1,1737 @@
+﻿focus_tree = {
+	id = mongolian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MON
+		
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 100 y = 2000 }
+
+	focus = { 
+		id = return_to_the_world_stage
+		icon = GFX_goal_generic_demand_territory
+		x = 9
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		#prerequisite = { focus = AST_workers_paradise focus = AST_joins_comintern }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = unite_the_clans
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 2
+		relative_position_id = return_to_the_world_stage
+		mutually_exclusive = { focus = crush_the_clans }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = return_to_the_world_stage }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_stability = 0.1
+			 add_war_support = -0.05
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+		focus = { 
+		id = crush_the_clans
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 2
+		relative_position_id = return_to_the_world_stage
+		mutually_exclusive = { focus = unite_the_clans }
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = return_to_the_world_stage }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = modernize_the_army
+		icon = GFX_goal_generic_small_arms
+		x = 19
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		#prerequisite = { focus = AST_workers_paradise focus = AST_joins_comintern }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = infantry_tech
+}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = militarize_schools
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = modernize_the_army
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = modernize_the_army }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = prepare_the_hordes
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		relative_position_id = militarize_schools
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = militarize_schools }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 10000
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = advanced_cavalry_defense
+		icon = GFX_goal_generic_cavalry
+		x = 2
+		y = 1
+		relative_position_id = prepare_the_hordes
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = prepare_the_hordes }
+		mutually_exclusive = { focus = conscript_the_nomads }
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = advanced_cavalry_defense
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = conscript_the_nomads
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 1
+		relative_position_id = prepare_the_hordes
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = prepare_the_hordes }
+		mutually_exclusive = { focus = advanced_cavalry_defense }
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 10000
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = advanced_cavalry_offense
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		relative_position_id = advanced_cavalry_defense
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = advanced_cavalry_defense }
+
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = advanced_cavalry_offense
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = mongol_mobilization
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = conscript_the_nomads
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = conscript_the_nomads }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 15000
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = advanced_cavalry_mobility
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		relative_position_id = advanced_cavalry_offense
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = advanced_cavalry_offense }
+
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = advanced_cavalry_mobility
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = swift_training_regiments
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		relative_position_id = mongol_mobilization
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = mongol_mobilization }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = {
+		id = develop_the_steppes
+		icon = GFX_goal_generic_construct_infrastructure
+		#prerequisite = { focus = infrastructure_effort }
+		x = 25
+		y = 1
+		#relative_position_id = infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = gobi_desert_railway_networks
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 1
+		relative_position_id = develop_the_steppes
+		#mutually_exclusive = { focus = crush_the_clans }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = develop_the_steppes }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = expand_manual_labour
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 2
+		relative_position_id = develop_the_steppes
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = develop_the_steppes }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = expand_weapon_manufacturing
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 1
+		relative_position_id = develop_the_steppes
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = develop_the_steppes }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = mongol_oil_fields
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = gobi_desert_railway_networks
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = gobi_desert_railway_networks }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+    type = oil
+    amount = 15
+    state = 330
+}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = mongol_war_technology
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = grow_ulaan_baatar
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = grow_ulaan_baatar }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = expand_weapon_manufacturing_2
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = expand_weapon_manufacturing
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = expand_weapon_manufacturing }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = expand_manual_labour_2
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = expand_manual_labour
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = expand_manual_labour }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = expand_weapon_manufacturing_3
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = expand_weapon_manufacturing_2
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = expand_weapon_manufacturing_2 }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = grow_ulaan_baatar
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		relative_position_id = mongol_oil_fields
+		
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = mongol_oil_fields }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_extra_state_shared_building_slots = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = mongol_industrial_revolution
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		relative_position_id = expand_weapon_manufacturing_3
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = expand_weapon_manufacturing_3 }
+		prerequisite = { focus = expand_manual_labour_2 }
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_tech_bonus = {
+    bonus = 0.72
+    uses = 2
+    category = industry
+}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	}
+	focus = { 
+		id = embrace_modernization
+		icon = GFX_focus_research2
+		x = 0
+		y = 2
+		relative_position_id = expand_manual_labour_2
+		available = {
+		}
+		bypass = {
+		}
+		cost = 30
+		prerequisite = { focus = mongol_war_technology }
+		prerequisite = { focus = mongol_industrial_revolution }
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 remove_ideas = uncivilised_nation
+			 add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+	} 
+	focus = {
+		id = mongol_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 40
+		y = 1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = bigger_is_better
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = mongol_shipyards }
+		x = 1
+		y = 1
+		relative_position_id = mongol_shipyards
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	focus = {
+		id = large_mongol_fleets
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = bigger_is_better }
+		x = 0
+		y = 1
+		relative_position_id = bigger_is_better
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = mongol_battleships
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = large_mongol_fleets }
+		x = 0
+		y = 1
+		relative_position_id = large_mongol_fleets
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = mongols_in_the_sky
+		icon = GFX_goal_generic_build_airforce
+		x = 37
+		y = 1
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = pegasus_planes
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = mongols_in_the_sky }
+		mutually_exclusive = { focus = mongol_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = mongols_in_the_sky
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = mongol_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = mongols_in_the_sky }
+		mutually_exclusive = { focus = pegasus_planes }
+		x = 1
+		y = 1
+		relative_position_id = mongols_in_the_sky
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = mongols_in_the_clouds
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = pegasus_planes focus = mongol_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = mongol_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = hellfire_from_above
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = mongols_in_the_clouds }
+		x = 0
+		y = 1
+		relative_position_id = mongols_in_the_clouds
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = mongols_can_into_space
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = mongols_in_the_clouds }
+		x = 2
+		y = 1
+		relative_position_id = mongols_in_the_clouds
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	focus = {
+		id = mongol_sea_monsters
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = mongol_battleships }
+		prerequisite = { focus = mongols_can_into_space }
+		x = -1
+		y = 1
+		relative_position_id = mongol_battleships
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 3.0
+				ahead_reduction = 2
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	focus = { 
+		id = support_the_democratic_union_coalition
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		relative_position_id = unite_the_clans
+		mutually_exclusive = { focus = strengthen_the_peoples_republic }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = unite_the_clans }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_timed_idea = { idea = support_the_democratic_union_coalition days = 1095 }
+			 add_political_power = 130
+		}
+	}
+	focus = { 
+		id = strengthen_the_peoples_republic
+		icon = GFX_goal_generic_demand_territory
+		x = -3
+		y = 1
+		relative_position_id = unite_the_clans
+		mutually_exclusive = { focus = support_the_democratic_union_coalition }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = unite_the_clans }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+			add_stability = .1
+			}
+		}
+		focus = { 
+		id = demand_tuvan_subjugation
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		relative_position_id = strengthen_the_peoples_republic
+		#mutually_exclusive = { focus = support_the_democratic_union_coalition }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = strengthen_the_peoples_republic focus = support_the_democratic_union_coalition}
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TAN = {
+					country_event = mongolia.demand_tuvan_subjugation.1
+			TAN = {
+					leave_faction = yes
+}
+			}
+		}
+	}
+	focus = { 
+		id = support_the_soviets
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		relative_position_id = strengthen_the_peoples_republic
+		mutually_exclusive = { focus = support_the_prc }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = demand_tuvan_subjugation }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		remove_ideas = lost_purpose_in_the_world
+			
+		}
+	}
+	focus = { 
+		id = socialist_tax_reform
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		relative_position_id = support_the_soviets
+		#mutually_exclusive = { focus = support_the_democratic_union_coalition }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = support_the_soviets focus = support_the_prc }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = socialist_tax_reform
+		}
+	}
+		focus = { 
+		id = support_the_prc
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 2
+		relative_position_id = strengthen_the_peoples_republic
+		mutually_exclusive = { focus = support_the_soviets }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = demand_tuvan_subjugation }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			give_guarantee = PRC
+			leave_faction = yes
+		}
+	}
+	focus = { 
+		id = learn_from_the_soviets
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		relative_position_id = support_the_soviets
+		#mutually_exclusive = { focus = support_the_prc }
+		available = {
+		}
+		bypass = {
+		}
+		cost = 10
+		prerequisite = { focus = support_the_soviets }
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_tech_sharing_group = mongolian_soviet_research_agreement
+			SOV = {add_to_tech_sharing_group = mongolian_soviet_research_agreement}
+		}
+	}
+}
